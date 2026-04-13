@@ -6,13 +6,14 @@ This project implements and compares five trading strategies on historical NFLX 
 All equity curves are normalized to a starting value of $1,000 and filtered from 2019-01-31 for clarity and comparability across strategies.
 
 ## Strategies
-Strategy | Frequency | Purpose |
+| Strategy | Frequency | Philosophy |
+|---|---|---|
+| Buy & Hold | Daily | Passive long-term exposure |
+| Momentum | Monthly | Follow the trend |
+| SMA Crossover (50/200) | Daily | Trend following |
+| Volatility Targeting | Daily | Dynamic risk management |
+| Mean Reversion (Bollinger Bands) | Daily | Revert to the mean |
 
-Buy & Hold | Daily | Passive long-term exposure |
-Momentum | Monthly | Follow the trend |
-SMA Crossover (50/200) | Daily | Trend following |
-Volatility Targeting | Daily | Dynamic risk management |
-Mean Reversion (Bollinger Bands) | Daily | Revert to the mean |
 
 ## Performance Metrics
 Each strategy is evaluated using `compute_metrics()` from `Fonctions.py` :
@@ -55,8 +56,9 @@ matplotlib
 
 Backtesting period : 2019 - 2024
 
-Strategy | Annualized Return | Sharpe Ratio | Max Drawdown |
-Momentum | 29.44% | 1.07 | -38.12% |
-SMA Crossover | 18.46% | 0.54 | -48.00% |
-Volatility Target | 12.16% | 0.35 | -65.17% |
-Mean Reversion | 5.82% | 0.38 | -34.52% |
+| Strategy | Annualized Return | Sharpe Ratio | Max Drawdown |
+|---|---|---|---|
+| Momentum | 29.44% | 1.07 | -38.12% |
+| SMA Crossover | 18.46% | 0.54 | -48.00% |
+| Volatility Target | 12.16% | 0.35 | -65.17% |
+| Mean Reversion | 5.82% | 0.38 | -34.52% |
