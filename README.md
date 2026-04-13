@@ -6,7 +6,7 @@ This project implements and compares five trading strategies on historical NFLX 
 All equity curves are normalized to a starting value of $1,000 and filtered from 2019-01-31 for clarity and comparability across strategies.
 
 ## Strategies
-| Strategy | Frequency | Philosophy |
+| Strategy | Frequency | Purpose |
 |---|---|---|
 | Buy & Hold | Daily | Passive long-term exposure |
 | Momentum | Monthly | Follow the trend |
@@ -28,6 +28,7 @@ Each strategy is evaluated using `compute_metrics()` from `Fonctions.py` :
 - Historic VaR & Conditional VaR (CVaR)
 
 ## Project Structure
+```
 ├── Fonctions.py                  # Reusable metrics and utility functions
 ├── Data_loading.ipynb            # Data download and preprocessing
 ├── Buy_And_Hold.ipynb
@@ -39,7 +40,7 @@ Each strategy is evaluated using `compute_metrics()` from `Fonctions.py` :
 ├── NFLX_data.csv                 # Raw price data
 ├── NFLX_data_return.csv          # Log-returns
 └── metrics_*.csv                 # Exported metrics per strategy
-
+```
 ## Requirements
 numpy
 pandas
